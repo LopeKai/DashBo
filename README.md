@@ -11,6 +11,7 @@
 + ApexCharts.js
 + Framer-motion
 + React icons
++ React Hook Form
 
 
 <h2> Autenticação </h2>
