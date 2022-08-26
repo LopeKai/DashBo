@@ -1,8 +1,21 @@
-import { Flex, Text, Input, Icon, HStack, Box, Avatar } from '@chakra-ui/react'
-import { RiSearchLine, RiNotificationLine, RiUserAddLine } from 'react-icons/ri'
+import { Flex, Icon, IconButton, useBreakpointValue } from '@chakra-ui/react'
+import { RiMenuLine, RiSearchLine } from 'react-icons/ri'
 
+import { Profile } from './Profile'
+import { NoticationsNav } from './NotificationsNav'
+import { SearchBox } from './SearchBox'
+import { Logo } from './Logo'
+import { useSidebarDrawer } from '../../contexts/SidebarDrawerContext'
 
 export function Header() {
+    const { onOpen } = useSidebarDrawer()
+
+
+    const isWideVersion = useBreakpointValue({
+        base: false,
+        lg: true
+    })
+
     return (
         <Flex
             as="header"
@@ -14,67 +27,32 @@ export function Header() {
             px="6"
             align="center"
         >
-            <Text
-                fontSize="3xl"
-                fontWeight="bold"
-                letterSpacing="tight"
-                w="64"
-            >
-                DashGo
-                <Text as="span" ml="1" color="pink.500">.</Text>
-            </Text>
 
-            <Flex
-                as="label"
-                flex="1"
-                py="4"
-                px="8"
-                ml="6"
-                maxWidth={400}
-                alignSelf="center"
-                color="gray.200"
-                position="relative"
-                bg="gray.800"
-                borderRadius="full"
-            >
-                <Input
-                    color="gray.50"
-                    variant="unstyled"
-                    placeholder='Buscar na plataforma'
-                    _placeholder={{ color: 'gray.400' }}
-                    px="4"
-                    mr="4"
-                />
-                <Icon as={RiSearchLine} fontSize="20" />
-            </Flex>
+            {
+                !isWideVersion && (
+                    <IconButton
+                        aria-label='Open navigation'
+                        icon={<Icon as={RiMenuLine}/>}
+                        fontSize="24"
+                        variant="unstyled"
+                        onClick={onOpen}
+                        mr="2"
+                    >
 
-            <Flex
-                align="center"
-                ml="auto"
-            >
-                <HStack 
-                    spacing="4"
-                    mx="8"
-                    pr="8"
-                    py="1"
-                    color="gray.300"
-                    borderRightWidth={1}
-                    borderColor="gray.700"
-                >
-                    <Icon as={RiNotificationLine} fontSize="20" />
-                    <Icon as={RiUserAddLine} fontSize="20" />
-                </HStack>
+                    </IconButton>
+                )
+            }
+            <Logo />
 
-                <Flex
-                    align="center"
-                >
-                    <Box mr="4" textAlign="right">
-                        <Text>Kaique Lopes</Text>
-                        <Text color="gray.300" fontSize="small">Kaiqueraujo246@hotmail.com</Text>
-                    </Box>
-                    <Avatar size="md" name="Kaique Lopes" src="https://github.com/lopekai.png" />
+            {
+                isWideVersion && (
+                    <SearchBox />
+                )
+            }
 
-                </Flex>
+            <Flex align="center" ml="auto">
+                <NoticationsNav />
+                <Profile showProfileData={isWideVersion} />
             </Flex>
         </Flex>
     )
