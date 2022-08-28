@@ -12,6 +12,7 @@
     "@chakra-ui/react": "^2.2.8",
     "@emotion/react": "11",
     "@emotion/styled": "11",
+    "@hookform/resolvers": "^2.9.7",
     "apexcharts": "^3.35.4",
     "framer-motion": "6",
     "module-alias": "^2.2.2",
@@ -19,8 +20,10 @@
     "react": "18.2.0",
     "react-apexcharts": "^1.4.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.34.2",
     "react-icons": "^4.4.0",
-    "yarn": "^1.22.19"
+    "yarn": "^1.22.19",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/node": "^18.7.6",
