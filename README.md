@@ -16,6 +16,7 @@
 + MirageJs
 + Faker
 + React Query
++ Axios
 
 
 <h2> Autenticação </h2>
