@@ -1,7 +1,7 @@
-# DashBo
+# DashGo
 # Um projeto Dashbord desenvolvido na trilha Ignite. 🚀
 
-<h2> Status: Finalizado!  </h2>
+<h2> Status: em desenvolvimento ⚠️  </h2>
 
 <h4> Tecnologias: </h4>
 
@@ -13,6 +13,7 @@
 + React icons
 + React Hook Form
 + Yup
++ MirageJs
 
 
 <h2> Autenticação </h2>
