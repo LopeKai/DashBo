@@ -15,6 +15,7 @@
 + Yup
 + MirageJs
 + Faker
++ React Query
 
 
 <h2> Autenticação </h2>
