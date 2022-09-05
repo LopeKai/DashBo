@@ -1,7 +1,7 @@
 # DashGo
 # Um projeto Dashbord desenvolvido na trilha Ignite. 🚀
 
-<h2> Status: em desenvolvimento ⚠️  </h2>
+<h2> Status: Finalizado!  </h2>
 
 <h4> Tecnologias / Bibliotecas: </h4>
 
